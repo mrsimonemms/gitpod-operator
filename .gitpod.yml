@@ -2,7 +2,9 @@ image:
   file: .gitpod/Dockerfile
 
 tasks:
-  - command: |
+  - init: |
+      go install ./...
+    command: |
       docker login "$(cut -d '/' -f -1 <<< $IMG)" \
         --username "${REGISTRY_USERNAME}" \
         --password "${REGISTRY_TOKEN}"
