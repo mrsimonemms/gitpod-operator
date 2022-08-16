@@ -1,0 +1,20 @@
+# permissions for end users to view gitpods.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: gitpod-viewer-role
+rules:
+- apiGroups:
+  - deployment.gitpod.io
+  resources:
+  - gitpods
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - deployment.gitpod.io
+  resources:
+  - gitpods/status
+  verbs:
+  - get

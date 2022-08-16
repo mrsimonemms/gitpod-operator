@@ -1,0 +1,6 @@
+apiVersion: deployment.gitpod.io/v1alpha1
+kind: Gitpod
+metadata:
+  name: gitpod-sample
+spec:
+  # TODO(user): Add fields here
